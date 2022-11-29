@@ -4,27 +4,30 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const studentRouter = require('./components/students');
-const productRouter = require('./components/products');
-
+const indexRouter = require('./routes/home')
+const shopRouter = require('./routes/shop');
+const cartRouter = require('./routes/cart');
+const checkRouter = require('./routes/checkout');
+const productRouter = require('./routes/products');
 const app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'hbs');
 
+const viewspath = path.join(__dirname, 'views')
+app.set("views",viewspath);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/students', studentRouter);
-app.use('/products', productRouter);
+app.use('/index',indexRouter);
+app.use('/shop',shopRouter);
+app.use('/cart',cartRouter);
+app.use('/checkout',checkRouter);
+app.use('/product',productRouter)
 // catch 404 and forward to error handler
 app.use(function(req,
                  res,
@@ -45,5 +48,10 @@ app.use(function(err,
   res.status(err.status || 500);
   res.render('error');
 });
+const port = 3000
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 module.exports = app;

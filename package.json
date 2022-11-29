@@ -4,18 +4,31 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "server": "nodemon app.js",
     "start:dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "hbs": "~4.0.4",
+    "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wad-20KTPM1/eshopper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wad-20KTPM1/eshopper/issues"
+  },
+  "homepage": "https://github.com/wad-20KTPM1/eshopper#readme",
+  "description": ""
 }
