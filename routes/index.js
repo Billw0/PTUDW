@@ -32,5 +32,28 @@ router.get('/woman-shop', function(req, res, next) {
     //throw new Error('Unknown error!');
     res.render('woman-shop', { title: 'Express' });
 });
+
+router.get('/man-wear', function(req, res, next) {
+    //throw new Error('Unknown error!');
+    res.render('man-wear', { title: 'Express' });
+});
+
+router.get('/children', function(req, res, next) {
+    //throw new Error('Unknown error!');
+    res.render('children', { title: 'Express' });
+});
   
+router.get('/bags', function(req, res, next) {
+    //throw new Error('Unknown error!');
+    res.render('bags', { title: 'Express' });
+});
+router.get('/eye-wear', function(req, res, next) {
+    //throw new Error('Unknown error!');
+    res.render('eye-wear', { title: 'Express' });
+});
+
+router.get('/foot-wear', function(req, res, next) {
+    //throw new Error('Unknown error!');
+    res.render('foot-wear', { title: 'Express' });
+});
 module.exports = router;
