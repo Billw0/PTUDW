@@ -27,5 +27,10 @@ router.get('/checkout', function(req, res, next) {
     //throw new Error('Unknown error!');
     res.render('checkout', { title: 'Express' });
 });
+
+router.get('/woman-shop', function(req, res, next) {
+    //throw new Error('Unknown error!');
+    res.render('woman-shop', { title: 'Express' });
+});
   
 module.exports = router;
