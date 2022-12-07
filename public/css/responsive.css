@@ -137,6 +137,23 @@
         margin-top: 100px;
         padding: 20px;
     }
+    .sort{
+        padding:20px;
+        font-size:20px;
+        height:100px;
+        font-weight: bold;
+        
+    }
+    .sort select{
+        width:120px;
+        padding:0 0 0 10px;
+        border:none;
+        outline:none;
+        font-weight:bold;
+        color:purple;
+        background:transparent;
+        cursor:pointer;
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
